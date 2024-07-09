@@ -11,8 +11,6 @@ from publicsuffix2 import get_sld
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-url_suntory = "https://www.suntory.co.jp/"
-url_kirin = "https://www.kirin.co.jp/"
 
 
 def is_same_domain(domain="", link=""):
@@ -86,26 +84,26 @@ def get_all_words_list(url=""):
     return words
 
 
-# links_suntory = get_same_domain_links(url_suntory)
-# links_kirin = get_same_domain_links(url_kirin)
-# print(links_suntory)
-# print(len(links_suntory))
-# print(links_kirin)
-# print(len(links_kirin))
-# words_suntory = get_website_word_list(url_suntory)
-# words_kirin = get_website_word_list(url_kirin)
-# print(words_suntory)
-# print(len(words_suntory))
-# print(words_kirin)
-# print(len(words_kirin))
-all_words_suntory = get_all_words_list(url_suntory)
+# links_travel = get_same_domain_links(url_travel)
+# links_travel = get_same_domain_links(url_travel)
+# print(links_travel)
+# print(len(links_travel))
+# print(links_travel)
+# print(len(links_travel))
+# words_travel = get_website_word_list(url_travel)
+# words_travel = get_website_word_list(url_travel)
+# print(words_travel)
+# print(len(words_travel))
+# print(words_travel)
+# print(len(words_travel))
+all_words_travel = get_all_words_list(url_travel)
 print("all_words:")
-print(all_words_suntory)
-print("全単語数" + str(len(all_words_suntory)))
-all_words_set = set(all_words_suntory)
+print(all_words_travel)
+print("全単語数" + str(len(all_words_travel)))
+all_words_set = set(all_words_travel)
 result = []
 for word in all_words_set:
-    word_count = all_words_suntory.count(word)
+    word_count = all_words_travel.count(word)
     result.append((word, word_count))
 result.sort(key=lambda x: x[1], reverse=True)
 print("〜〜〜全単語とその頻度〜〜〜")
